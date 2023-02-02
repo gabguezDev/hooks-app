@@ -3,7 +3,7 @@ type Props = {
 	initialValues: {};
 };
 
-export const useForm = ({ initialValues }: Props) => {
+export const useForm = <T extends Object>(initialValues: T) => {
 	const [formState, setFormState] = useState(initialValues);
 
 	const onInputChange = (event: ChangeEvent<HTMLInputElement>) => {
